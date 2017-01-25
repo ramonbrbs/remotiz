@@ -1,5 +1,42 @@
-{% extends "blog/base.html" %}
+{% extends "base.html" %}
+
 
 {% block content %}
+
+    <div class="container">
+    <div class="bordertopbottom relative z20">
+        <div class="container ptb40 cdark">
+            <h3 class="text-center titlefont size30 c999">Vagas Remotas</h3>
+
+            <!-- <div class="toparrow"></div> -->
+        </div>
+    </div>
+
+
+
+    <div class="featured-boxes">
+
+        {% for job in jobs %}
+            <div class="col-md-4 col-sm-6">
+                <div class="featured-box featured-box-primary featured-box-effect-1" style="height: auto;">
+                    <div class="box-content">
+                        <i class="icon-featured fa fa-user"></i>
+                        <h4 class="text-uppercase">{{ job.title }}</h4>
+                        <p>{{ job.description|truncatewords_html:18 }}</p>
+                        <p>
+                            <a href="{{ job.get_absolute_url }}" class="lnk-primary learn-more">Tenho Interesse</a>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+
+
+    </div>
+
+</div>
+
 
 {% endblock %}

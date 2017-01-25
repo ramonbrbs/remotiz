@@ -1,7 +1,8 @@
 from django.db import models
 from taggit.managers import TaggableManager
 from django.utils import timezone
-
+from autoslug import AutoSlugField
+from django.core.urlresolvers import reverse
 
 
 class Job(models.Model):
@@ -9,8 +10,11 @@ class Job(models.Model):
     description = models.TextField()
     submitInfo = models.TextField()
     tags = TaggableManager()
-    slug = models.SlugField(max_length=250, unique_for_date='publish')
+    slug = AutoSlugField(populate_from='title', unique=True)
     publish = models.DateTimeField(default=timezone.now)
+
+    def get_absolute_url(self):
+        return reverse('job:job_detail', args=[self.slug])
 
     def __str__(self):
         return self.title

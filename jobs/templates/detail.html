@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load targetblank %}
+
+{% block content %}
+
+<div class="container">
+    <h2>{{ job.title }}</h2>
+
+    <div>
+
+        <hr />
+        <div class="row">
+            <div class="col-md-12">
+                <p class="lead">
+                    {{ job.description|linebreaks }}
+                </p>
+            </div>
+        </div>
+
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false">
+                            <i class="fa fa-laptop"></i>
+                            Inscrição
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseThree" class="accordion-body collapse" aria-expanded="false">
+                    <div class="panel-body">
+                        {{ job.submitInfo|urlize|targetblank|safe|linebreaks }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+{% endblock %}
