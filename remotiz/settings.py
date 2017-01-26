@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'jobs',
     'taggit',
+    'captcha',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -128,3 +130,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "remotiz/static"),]
 
 TAGGIT_CASE_INSENSITIVE = True
+
+RECAPTCHA_PUBLIC_KEY = '6LddLhMUAAAAACiplORcF-gR0hZCUWMvCybCqJNk'
+RECAPTCHA_PRIVATE_KEY = '6LddLhMUAAAAAKHpEAa2gBSQeL42n7K_EGmJAJ13'
+
+NOCAPTCHA = True

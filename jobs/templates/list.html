@@ -6,7 +6,7 @@
     <div class="container">
     <div class="bordertopbottom relative z20">
         <div class="container ptb40 cdark">
-            <h3 class="text-center titlefont size30 c999">Vagas Remotas</h3>
+            <h3 class="text-center titlefont size30 c999">Últimas Vagas</h3>
 
             <!-- <div class="toparrow"></div> -->
         </div>
@@ -38,5 +38,6 @@
 
 </div>
 
+{% include "pagination.html" with page=jobs %}
 
 {% endblock %}
