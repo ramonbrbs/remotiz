@@ -1,3 +1,4 @@
+remotiz/settings.py
 remotiz/settings_prod.py
 static/
 remotiz/static/*
