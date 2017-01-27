@@ -1,5 +1,5 @@
 static/
-remotiz/static
+remotiz/static/*
 .idea/workspace.xml
 jobs/__pycache__/__init__.cpython-36.pyc
 jobs/__pycache__/admin.cpython-36.pyc
