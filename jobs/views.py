@@ -12,7 +12,7 @@ class JobListView(ListView):
     def get_queryset(self):
         search = self.request.GET.get('s')
         if search:
-            return Job.objects.annotate(search=SearchVector('description', 'title')).filter(search=search)
+            return Job.objects.annotate(search=SearchVector('description', 'title')).filter(search=search).order_by('-publish')
 
         return Job.objects.filter(status='publicado')
     #queryset = Job.objects.filter(status='publicado')
