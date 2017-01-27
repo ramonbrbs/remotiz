@@ -7,14 +7,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Porto - Responsive HTML5 Template 4.3.1</title>
+    <title>{% block title %}{% endblock %} - Remotiz</title>
 
-    <meta name="keywords" content="HTML5 Template" />
+    <meta name="keywords" content="remoto, clt,freelancer, trabalho remoto, remoto,home office " />
     <meta name="description" content="Porto - Responsive HTML5 Template">
     <meta name="author" content="okler.net">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="~/img/favicon.ico" type="image/x-icon" />
+
     <link rel="apple-touch-icon"{% static "img/apple-touch-icon.png" %}>
 
     <!-- Mobile Metas -->
@@ -27,23 +27,17 @@
     <link rel="stylesheet" href="{% static "vendor/bootstrap/css/bootstrap.css" %}">
     <link rel="stylesheet" href="{% static "Content/font-awesome.min.css" %}">
 
-    <link rel="stylesheet" href="{% static "vendor/simple-line-icons/css/simple-line-icons.css" %}>
-    <link rel="stylesheet" href={% static "vendor/owl.carousel/assets/owl.carousel.min.css" %}>
+    <link rel="stylesheet" href="{% static "vendor/simple-line-icons/css/simple-line-icons.css" %}">
     <link rel="stylesheet" href="{% static "vendor/owl.carousel/assets/owl.theme.default.min.css" %}">
-    <link rel="stylesheet" href="{% static "vendor/magnific-popup/magnific-popup.css" %}">
 
     <!-- Theme CSS -->
     <link rel="stylesheet" href="{% static "css/theme.css" %}">
     <link rel="stylesheet" href="{% static "css/theme-elements.css" %}">
-    <link rel="stylesheet" href="{% static "css/theme-blog.css" %}">
-    <link rel="stylesheet" href="{% static "css/theme-shop.css" %}">
-    <link rel="stylesheet" href="{% static "css/theme-animate.css" %}">
 
     <!-- Current Page CSS -->
     <link rel="stylesheet" href="{% static "vendor/rs-plugin/css/settings.css" %}" media="screen">
     <link rel="stylesheet" href="{% static "vendor/rs-plugin/css/layers.css" %}" media="screen">
     <link rel="stylesheet" href="{% static "vendor/rs-plugin/css/navigation.css" %}" media="screen">
-    <link rel="stylesheet" href="{% static "vendor/circle-flip-slideshow/css/component.css" %}" media="screen">
 
     <!-- Skin CSS -->
     <link rel="stylesheet" href="{% static "css/skins/default.css" %}">
@@ -104,10 +98,14 @@
                                         <i class="fa fa-bars"></i>
                                     </button>
                                     <ul class="header-social-icons social-icons hidden-xs">
-                                        <li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                                        <li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                        <li class="social-icons-facebook"><a href="http://www.facebook.com/remotiz" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+
+                                        <li class="social-icons-twitter"><a href="http://www.twitter.com/remotizvagas" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                        {% comment %}
                                         <li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                                        {% endcomment %}
                                     </ul>
+                                    {% comment %}
                                     <div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
                                         <nav>
                                             <ul class="nav nav-pills" id="mainNav">
@@ -122,6 +120,7 @@
                                             </ul>
                                         </nav>
                                     </div>
+                                    {% endcomment %}
                                 </div>
                             </div>
                         </div>
@@ -186,9 +185,9 @@
                     <div class="col-md-2">
                         <h4>Redes Sociais</h4>
                         <ul class="social-icons">
-                            <li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                            <li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                            <li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                            <li class="social-icons-facebook"><a href="http://www.facebook.com/remotiz" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                            <li class="social-icons-twitter"><a href="http://www.twitter.com/remotizvagas" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                            {% comment %}<li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>{% endcomment %}
                         </ul>
                     </div>
                 </div>
@@ -201,7 +200,7 @@
     <script src="{% static "vendor/jquery/jquery.js" %}"></script>
     <script src="{% static "vendor/jquery.appear/jquery.appear.js" %}"></script>
     <script src="{% static "vendor/jquery.easing/jquery.easing.js" %}"></script>
-    <script src="{% static "vendor/jquery-cookie/jquery-cookie.js" %}"></script>
+
     <script src="{% static "vendor/bootstrap/js/bootstrap.js" %}"></script>
     <script src="{% static "vendor/common/common.js" %}"></script>
     <script src="{% static "vendor/jquery.validation/jquery.validation.js" %}"></script>
@@ -210,9 +209,9 @@
     <script src="{% static "vendor/jquery.gmap/jquery.gmap.js" %}"></script>
     <script src="{% static "vendor/jquery.lazyload/jquery.lazyload.js" %}"></script>
     <script src="{% static "vendor/isotope/jquery.isotope.js" %}"></script>
-    <script src="{% static "vendor/owl.carousel/owl.carousel.js" %}"></script>
-    <script src="{% static "vendor/magnific-popup/jquery.magnific-popup.js" %}"></script>
-    <script src="{% static "vendor/vide/vide.js" %}"></script>
+
+
+
 
     <!-- Theme Base, Components and Settings -->
     <script src="{% static "js/theme.js" %}"></script>
@@ -220,7 +219,7 @@
     <!-- Current Page Vendor and Views -->
     <script src="{% static "vendor/rs-plugin/js/jquery.themepunch.tools.min.js" %}"></script>
     <script src="{% static "vendor/rs-plugin/js/jquery.themepunch.revolution.min.js" %}"></script>
-    <script src="{% static "vendor/circle-flip-slideshow/js/jquery.flipshow.js" %}"></script>
+
     <script src="{% static "js/views/view.home.js" %}"></script>
 
     <!-- Theme Custom -->

@@ -25,7 +25,7 @@ SECRET_KEY = 'o-n5i%qcyc=oraz9q7#-rc9q9f_ej-t=hkqwcxw04^&t58k&*('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['67.205.171.205','remotiz.com']
+ALLOWED_HOSTS = ['67.205.171.205','remotiz.com','localhost']
 
 
 # Application definition
