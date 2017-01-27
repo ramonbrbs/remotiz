@@ -25,7 +25,7 @@ SECRET_KEY = 'o-n5i%qcyc=oraz9q7#-rc9q9f_ej-t=hkqwcxw04^&t58k&*('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['67.205.171.205','remotiz.com']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+	'django.contrib.postgres',
     'jobs',
     'taggit',
     'captcha',
@@ -58,7 +59,7 @@ ROOT_URLCONF = 'remotiz.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['remotiz/templates'],
+        'DIRS': [os.path.join(BASE_DIR, "remotiz/templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -135,3 +136,4 @@ RECAPTCHA_PUBLIC_KEY = '6LddLhMUAAAAACiplORcF-gR0hZCUWMvCybCqJNk'
 RECAPTCHA_PRIVATE_KEY = '6LddLhMUAAAAAKHpEAa2gBSQeL42n7K_EGmJAJ13'
 
 NOCAPTCHA = True
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
