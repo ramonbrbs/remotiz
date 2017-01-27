@@ -1,3 +1,4 @@
+remotiz/settings_prod.py
 static/
 remotiz/static/*
 .idea/workspace.xml
