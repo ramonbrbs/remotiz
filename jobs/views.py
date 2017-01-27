@@ -8,13 +8,13 @@ from .forms import AddJobForm
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib.postgres.search import SearchVector
 
-@csrf_exempt
+
 class JobListView(ListView):
 
     def get_queryset(self):
         search = self.request.GET.get('s')
         if search:
-            return Job.objects.annotate(search=SearchVector('description', 'title')).filter(status='publicado').order_by('-publish')
+            return Job.objects.annotate(search=SearchVector('description', 'title')).filter(search=search).filter(status='publicado').order_by('-publish')
 
 
         return Job.objects.filter(status='publicado').order_by('-publish')
