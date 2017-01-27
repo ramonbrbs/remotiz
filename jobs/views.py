@@ -4,9 +4,18 @@ from .models import Job
 from django.views.generic import ListView
 from .forms import AddJobForm
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.contrib.postgres.search import SearchVector
+
 
 class JobListView(ListView):
-    queryset = Job.objects.filter(status='publicado')
+
+    def get_queryset(self):
+        search = self.request.GET.get('s')
+        if search:
+            return Job.objects.annotate(search=SearchVector('description', 'title')).filter(search=search)
+
+        return Job.objects.filter(status='publicado')
+    #queryset = Job.objects.filter(status='publicado')
     context_object_name = 'jobs'
     paginate_by = 6
     template_name = 'list.html'
