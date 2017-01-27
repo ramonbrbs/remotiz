@@ -1,12 +1,14 @@
 from django.forms.models import modelformset_factory
 from django.shortcuts import render, get_object_or_404
+from django.views.decorators.csrf import csrf_exempt
+
 from .models import Job
 from django.views.generic import ListView
 from .forms import AddJobForm
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib.postgres.search import SearchVector
 
-
+@csrf_exempt
 class JobListView(ListView):
 
     def get_queryset(self):
