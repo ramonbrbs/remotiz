@@ -1,6 +1,6 @@
 remotiz/settings.py
 remotiz/settings_prod.py
-static/
+#static/
 #remotiz/static/*
 .idea/workspace.xml
 jobs/__pycache__/__init__.cpython-36.pyc
