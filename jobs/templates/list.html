@@ -2,8 +2,7 @@
 
 {% block title %}Vagas para Trabalho Remoto | Freelancer e Empregos{% endblock %}
 {% block content %}
-
-    <div class="container">
+<div class='container'>
     <div class="bordertopbottom relative z20">
         <div class="container ptb40 cdark">
             <h1 class="text-center titlefont size30 c999">Últimas Vagas</h1>
@@ -11,30 +10,54 @@
             <!-- <div class="toparrow"></div> -->
         </div>
     </div>
+</div>
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-hover table-striped">
+                            <tbody>
 
+{% for job in jobs %}
 
-
-    <div class="featured-boxes">
-
-        {% for job in jobs %}
-            <div class="col-md-4 col-sm-6">
-                <div class="featured-box featured-box-primary featured-box-effect-1" style="height: auto;">
-                    <div class="box-content">
-                        <i class="icon-featured fa fa-user"></i>
-                        <h4 class="text-uppercase">{{ job.title }}</h4>
-                        <p>{{ job.description|truncatewords_html:18 }}</p>
-                        <p>
-                            <a href="{{ job.get_absolute_url }}" class="lnk-primary learn-more">Tenho Interesse</a>
-
-                        </p>
+                                <tr>
+                                    <td>
+                                        <i class="-alt fa fa-2x fa-user fa-fw"></i>
+                                    </td>
+                                    <td>
+                                        <h4>
+                                            <a href='{{ job.get_absolute_url }}'><b>{{ job.title }}</b></a>
+                                        </h4>
+                                        <p>{{ job.publish |date:"d/m/Y"  }}</p>
+                                    </td>
+                                    <td>
+                                        <p>{{ job.description|truncatewords_html:18 }}</p>
+                                    </td>
+                                    
+                                    <td><div class="btn-group">
+                                        {% for tag in job.tags.all %}
+                                        
+                                            <button class="btn btn-default" value="left" type="button">
+                                                {{tag}}</button>
+                                        
+                                        
+                                        {% endfor %}
+                                        </div>
+                                        
+                                    </td>
+                                </tr>
+{% endfor %}                                
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
-        {% endfor %}
+        </div>
+    <div class="container">
+    
 
 
 
-    </div>
 
 </div>
 
