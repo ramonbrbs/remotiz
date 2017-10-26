@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "C:/Users/ramon/AppData/Local/Continuum/Miniconda3/envs/remotiz/python"
+    "python.pythonPath": "C:/Users/ramon/AppData/Local/Continuum/Miniconda3/envs/remotiz/python",
+    "python.linting.pylintEnabled": false
 }
