@@ -3,10 +3,21 @@
 {% block keywords %}
     <meta name="keywords" content="{{ job.tags.all|join:"," }}" />
 {% endblock %}
+{% block scripts%}
+<script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "JobPosting",
+      "datePosted": "{{ job.publish |date:"Y-m-d"}}",
+      "description": "{{job.description}}",
+      "title" : "{{ job.title }}",
+    }
+    </script>
+{% endblog %}
 {% block title %}{{ job.title }} {{ job.tags.all|join:" " }} {% endblock %}
 {% block content %}
 <section class="page-header">
-					<div class="container" itemscope itemtype="http://schema.org/JobPosting">
+					<div class="container">
 						<div class="row">
 							<div class="col-md-12">
 								<ul class="breadcrumb">
@@ -17,7 +28,7 @@
 						</div>
 						<div class="row">
 							<div class="col-md-12">
-								<h1 itemprop="title">{{ job.title }}</h1> <p>Publicado em {{ job.publish |date:"d/m/Y"  }}</p>
+								<h1>{{ job.title }}</h1> <p>Publicado em {{ job.publish |date:"d/m/Y"  }}</p>
 							</div>
 						</div>
 					</div>
