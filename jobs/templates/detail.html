@@ -3,7 +3,7 @@
 {% block keywords %}
     <meta name="keywords" content="{{ job.tags.all|join:"," }}" />
 {% endblock %}
-{% block title %}{{ job.title }}{% endblock %}
+{% block title %}{{ job.title }} {{ job.tags.all|join:" " }} {% endblock %}
 {% block content %}
 <section class="page-header">
 					<div class="container">
