@@ -1,0 +1,190 @@
+[2018-10-09 11:57:49 +0000] [14827] [INFO] Starting gunicorn 19.9.0
+[2018-10-09 11:57:49 +0000] [14827] [INFO] Listening at: http://0.0.0.0:80 (14827)
+[2018-10-09 11:57:49 +0000] [14827] [INFO] Using worker: sync
+[2018-10-09 11:57:49 +0000] [14830] [INFO] Booting worker with pid: 14830
+/usr/local/lib/python3.6/dist-packages/psycopg2/__init__.py:144: UserWarning: The psycopg2 wheel package will be renamed from release 2.8; in order to keep installing from binary please use "pip install psycopg2-binary" instead. For details see: <http://initd.org/psycopg/docs/install.html#binary-install-from-pypi>.
+  """)
+Invalid HTTP_HOST header: '159.203.66.26'. You may need to add '159.203.66.26' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '159.203.66.26'. You may need to add '159.203.66.26' to ALLOWED_HOSTS.
+[2018-10-09 11:58:34 +0000] [14827] [CRITICAL] WORKER TIMEOUT (pid:14830)
+[2018-10-09 11:58:34 +0000] [14830] [INFO] Worker exiting (pid: 14830)
+[2018-10-09 11:58:34 +0000] [14838] [INFO] Booting worker with pid: 14838
+/usr/local/lib/python3.6/dist-packages/psycopg2/__init__.py:144: UserWarning: The psycopg2 wheel package will be renamed from release 2.8; in order to keep installing from binary please use "pip install psycopg2-binary" instead. For details see: <http://initd.org/psycopg/docs/install.html#binary-install-from-pypi>.
+  """)
+Invalid HTTP_HOST header: '159.203.66.26'. You may need to add '159.203.66.26' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '159.203.66.26'. You may need to add '159.203.66.26' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.remotiz.com'. You may need to add 'www.remotiz.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.remotiz.com'. You may need to add 'www.remotiz.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '0.0.0.0'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.remotiz.com'. You may need to add 'www.remotiz.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.remotiz.com'. You may need to add 'www.remotiz.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.remotiz.com'. You may need to add 'www.remotiz.com' to ALLOWED_HOSTS.
+[2018-10-09 12:17:21 +0000] [14827] [INFO] Handling signal: term
+[2018-10-09 12:17:21 +0000] [14838] [INFO] Worker exiting (pid: 14838)
+[2018-10-09 12:17:22 +0000] [14827] [INFO] Shutting down: Master
+[2018-10-09 12:17:39 +0000] [15005] [INFO] Starting gunicorn 19.9.0
+[2018-10-09 12:17:39 +0000] [15005] [INFO] Listening at: http://0.0.0.0:80 (15005)
+[2018-10-09 12:17:39 +0000] [15005] [INFO] Using worker: sync
+[2018-10-09 12:17:39 +0000] [15008] [INFO] Booting worker with pid: 15008
+/usr/local/lib/python3.6/dist-packages/psycopg2/__init__.py:144: UserWarning: The psycopg2 wheel package will be renamed from release 2.8; in order to keep installing from binary please use "pip install psycopg2-binary" instead. For details see: <http://initd.org/psycopg/docs/install.html#binary-install-from-pypi>.
+  """)
+Invalid HTTP_HOST header: '159.203.66.26'. You may need to add '159.203.66.26' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: '159.203.66.26'. You may need to add '159.203.66.26' to ALLOWED_HOSTS.
+Not Found: /static/vendor/bootstrap/css/bootstrap.css
+Not Found: /static/Content/font-awesome.min.css
+Not Found: /static/vendor/simple-line-icons/css/simple-line-icons.css
+Not Found: /static/vendor/owl.carousel/assets/owl.theme.default.min.css
+Not Found: /static/css/theme-elements.css
+Not Found: /static/css/theme.css
+Not Found: /static/vendor/rs-plugin/css/layers.css
+Not Found: /static/vendor/rs-plugin/css/settings.css
+Not Found: /static/vendor/rs-plugin/css/navigation.css
+Not Found: /static/css/skins/default.css
+Not Found: /static/vendor/modernizr/modernizr.js
+Not Found: /static/css/custom.css
+Not Found: /static/vendor/jquery.appear/jquery.appear.js
+Not Found: /static/vendor/jquery/jquery.js
+Not Found: /static/vendor/jquery.validation/jquery.validation.js
+Not Found: /static/vendor/common/common.js
+Not Found: /static/vendor/bootstrap/js/bootstrap.js
+Not Found: /static/vendor/jquery.easing/jquery.easing.js
+Not Found: /static/vendor/jquery.stellar/jquery.stellar.js
+Not Found: /static/vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.js
+Not Found: /static/images/logo.png
+Not Found: /static/vendor/isotope/jquery.isotope.js
+Not Found: /static/js/theme.js
+Not Found: /static/vendor/jquery.lazyload/jquery.lazyload.js
+Not Found: /static/vendor/jquery.gmap/jquery.gmap.js
+Not Found: /static/vendor/rs-plugin/js/jquery.themepunch.tools.min.js
+Not Found: /static/vendor/rs-plugin/js/jquery.themepunch.revolution.min.js
+Not Found: /static/vendor/common/common.js
+Not Found: /static/js/views/view.home.js
+Not Found: /static/js/theme.init.js
+Not Found: /static/js/custom.js
+Not Found: /static/vendor/jquery.lazyload/jquery.lazyload.js
+Not Found: /static/vendor/rs-plugin/js/jquery.themepunch.tools.min.js
+Not Found: /static/js/views/view.home.js
+Not Found: /static/js/theme.init.js
+Not Found: /favicon.ico
+Not Found: /static/vendor/bootstrap/js/bootstrap.js
+Not Found: /static/vendor/rs-plugin/css/navigation.css
+Not Found: /static/Content/font-awesome.min.css
+Not Found: /static/vendor/rs-plugin/css/layers.css
+Not Found: /static/css/theme.css
+Not Found: /static/vendor/jquery.appear/jquery.appear.js
+Not Found: /static/vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.js
+Not Found: /static/vendor/jquery.stellar/jquery.stellar.js
+Not Found: /static/vendor/jquery.validation/jquery.validation.js
+Not Found: /static/vendor/jquery/jquery.js
+Not Found: /static/images/logo.png
+Not Found: /static/vendor/jquery.gmap/jquery.gmap.js
+Not Found: /static/vendor/rs-plugin/js/jquery.themepunch.tools.min.js
+Not Found: /static/vendor/rs-plugin/js/jquery.themepunch.revolution.min.js
+Not Found: /static/vendor/jquery.appear/jquery.appear.js
+Not Found: /static/vendor/jquery.stellar/jquery.stellar.js
+Not Found: /static/vendor/isotope/jquery.isotope.js
+[2018-10-09 12:19:16 +0000] [15005] [INFO] Handling signal: term
+[2018-10-09 12:19:16 +0000] [15008] [INFO] Worker exiting (pid: 15008)
+[2018-10-09 12:19:17 +0000] [15005] [INFO] Shutting down: Master
+[2018-10-09 12:19:40 +0000] [15037] [INFO] Starting gunicorn 19.9.0
+[2018-10-09 12:19:40 +0000] [15037] [INFO] Listening at: http://0.0.0.0:80 (15037)
+[2018-10-09 12:19:40 +0000] [15037] [INFO] Using worker: sync
+[2018-10-09 12:19:40 +0000] [15040] [INFO] Booting worker with pid: 15040
+/usr/local/lib/python3.6/dist-packages/psycopg2/__init__.py:144: UserWarning: The psycopg2 wheel package will be renamed from release 2.8; in order to keep installing from binary please use "pip install psycopg2-binary" instead. For details see: <http://initd.org/psycopg/docs/install.html#binary-install-from-pypi>.
+  """)
+Not Found: /static/vendor/bootstrap/css/bootstrap.css
+Not Found: /static/Content/font-awesome.min.css
+Not Found: /static/vendor/simple-line-icons/css/simple-line-icons.css
+Not Found: /static/vendor/owl.carousel/assets/owl.theme.default.min.css
+Not Found: /static/css/theme.css
+Not Found: /static/css/theme-elements.css
+Not Found: /static/vendor/rs-plugin/css/settings.css
+Not Found: /static/vendor/rs-plugin/css/layers.css
+Not Found: /static/vendor/rs-plugin/css/navigation.css
+Not Found: /static/css/custom.css
+Not Found: /static/css/skins/default.css
+Not Found: /static/vendor/modernizr/modernizr.js
+Not Found: /static/vendor/jquery/jquery.js
+Not Found: /static/vendor/jquery.appear/jquery.appear.js
+Not Found: /static/vendor/common/common.js
+Not Found: /static/vendor/bootstrap/js/bootstrap.js
+Not Found: /static/vendor/jquery.easing/jquery.easing.js
+Not Found: /static/vendor/jquery.validation/jquery.validation.js
+Not Found: /static/images/logo.png
+Not Found: /static/vendor/jquery.stellar/jquery.stellar.js
+Not Found: /static/vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.js
+Not Found: /static/vendor/jquery.lazyload/jquery.lazyload.js
+Not Found: /static/vendor/jquery.gmap/jquery.gmap.js
+Not Found: /static/vendor/isotope/jquery.isotope.js
+Not Found: /static/js/theme.js
+Not Found: /static/js/views/view.home.js
+Not Found: /static/vendor/rs-plugin/js/jquery.themepunch.revolution.min.js
+Not Found: /static/vendor/rs-plugin/js/jquery.themepunch.tools.min.js
+Not Found: /static/js/theme.init.js
+Not Found: /static/js/custom.js
+Not Found: /favicon.ico
+Not Found: /static/Content/font-awesome.min.css
+Not Found: /static/vendor/bootstrap/css/bootstrap.css
+Not Found: /static/css/theme-elements.css
+Not Found: /static/vendor/owl.carousel/assets/owl.theme.default.min.css
+Not Found: /static/vendor/rs-plugin/css/layers.css
+Not Found: /static/vendor/modernizr/modernizr.js
+Not Found: /static/vendor/rs-plugin/css/settings.css
+Not Found: /static/css/custom.css
+Not Found: /static/vendor/jquery/jquery.js
+Not Found: /static/vendor/bootstrap/js/bootstrap.js
+Not Found: /static/vendor/jquery.appear/jquery.appear.js
+Not Found: /static/vendor/common/common.js
+Not Found: /static/vendor/jquery.validation/jquery.validation.js
+Not Found: /static/images/logo.png
+Not Found: /static/vendor/jquery.stellar/jquery.stellar.js
+Not Found: /static/vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.js
+Not Found: /static/vendor/isotope/jquery.isotope.js
+Not Found: /static/vendor/jquery.lazyload/jquery.lazyload.js
+Not Found: /static/js/theme.js
+Not Found: /static/vendor/rs-plugin/js/jquery.themepunch.tools.min.js
+Not Found: /static/js/views/view.home.js
+Not Found: /static/vendor/jquery.validation/jquery.validation.js
+Not Found: /static/vendor/jquery.gmap/jquery.gmap.js
+Not Found: /static/vendor/jquery.lazyload/jquery.lazyload.js
+Not Found: /static/vendor/rs-plugin/js/jquery.themepunch.revolution.min.js
+Not Found: /static/js/custom.js
+Not Found: /static/vendor/bootstrap/js/bootstrap.js
+[2018-10-09 12:24:44 +0000] [15040] [INFO] Worker exiting (pid: 15040)
+[2018-10-09 12:24:44 +0000] [15101] [INFO] Booting worker with pid: 15101
+/usr/local/lib/python3.6/dist-packages/psycopg2/__init__.py:144: UserWarning: The psycopg2 wheel package will be renamed from release 2.8; in order to keep installing from binary please use "pip install psycopg2-binary" instead. For details see: <http://initd.org/psycopg/docs/install.html#binary-install-from-pypi>.
+  """)
+[2018-10-09 12:24:45 +0000] [15101] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python3.6/dist-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python3.6/dist-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python3.6/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python3.6/dist-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/usr/local/lib/python3.6/dist-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/usr/local/lib/python3.6/dist-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/remotiz/remotiz/remotiz/wsgi.py", line 18, in <module>
+    from whitenoise.django import DjangoWhiteNoise
+  File "/usr/local/lib/python3.6/dist-packages/whitenoise/django.py", line 2, in <module>
+    '\n\n'
+ImportError: 
+
+Your WhiteNoise configuration is incompatible with WhiteNoise v4.0
+This can be fixed by following the upgrade instructions at:
+http://whitenoise.evans.io/en/stable/changelog.html#v4-0
+
+
+[2018-10-09 12:24:45 +0000] [15101] [INFO] Worker exiting (pid: 15101)
+[2018-10-09 12:24:45 +0000] [15037] [INFO] Shutting down: Master
+[2018-10-09 12:24:45 +0000] [15037] [INFO] Reason: Worker failed to boot.
+[2018-10-09 12:48:41 +0000] [15408] [INFO] Starting gunicorn 19.9.0
+[2018-10-09 12:48:41 +0000] [15408] [INFO] Listening at: http://0.0.0.0:80 (15408)
+[2018-10-09 12:48:41 +0000] [15408] [INFO] Using worker: sync
+[2018-10-09 12:48:41 +0000] [15411] [INFO] Booting worker with pid: 15411
