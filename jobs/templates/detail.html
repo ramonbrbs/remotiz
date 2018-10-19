@@ -3,7 +3,7 @@
 {% load targetblank %}
 {% block keywords %}{{ job.tags.all|join:"," }}{% endblock %}
 
-{% block description %}{{jobs.title}} {{job.description|truncatewords:10}} {% endblock description %}
+{% block description %}{{jobs.title}} {{job.description|truncatewords:22}} {% endblock description %}
   
 {% block scripts%}
 <script type="application/ld+json">
