@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 {% load targetblank %}
 {% block keywords %}
     <meta name="keywords" content="{{ job.tags.all|join:"," }}" />
@@ -14,72 +15,98 @@
     }
     </script>
 {% endblock %}
+
+{% block header %}
+<!-- Page header -->
+<header class="page-header bg-img size-lg" style="background-image: url({% static 'img/bg-banner1.jpg' %})">
+    <div class="container">
+      <div class="header-detail">
+        <img class="logo" src="assets/img/logo-google.jpg" alt="">
+        <div class="hgroup">
+          <h1>{{ job.title }}</h1>
+          <h3><a href="#">{% if job.company %} {{ job.company}} {% else %} - {% endif %} </a></h3>
+        </div>
+        <time datetime="2016-03-03 20:00">{{ job.publish |date:"d/m/Y"  }}</time>
+        
+        
+        <ul class="details cols-3">
+          
+
+          <li>
+            <i class="fa fa-briefcase"></i>
+            <span>{% if job.tipo %}{{job.tipo}}{%else%}Não informado{%endif%}</span>
+          </li>
+
+          <li>
+            <i class="fa fa-money"></i>
+            <span>{% if job.salary %}{{ job.salary }} {% else %} Não Informado {%endif%}</span>
+          </li>
+
+          
+        </ul>
+
+        <hr>
+
+        {{job.description}}
+
+        <div class="button-group">
+          <ul class="social-icons">
+            <li class="title">Compartilhar</li>
+            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+
+          <div class="action-buttons">
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#InfoCandidato">Candidatar-se</button>
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+  <!-- END Page header -->
+{% endblock %}
+
+
+
 {% block title %}{{ job.title }} {{ job.tags.all|join:" " }} {% endblock %}
 {% block content %}
-<section class="page-header">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-12">
-								<ul class="breadcrumb">
-									<li><a href="{% url "job:jobs_list" %}">Home</a></li>
-									<li class="active">Vaga</li>
-								</ul>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-12">
-								<h1>{{ job.title }}</h1> <p>Publicado em {{ job.publish |date:"d/m/Y"  }}</p>
-							</div>
-						</div>
-					</div>
-				</section>
-<div class="container">
-    <div>
 
 
-        <div class="row">
-            <div class="col-md-12">
-                <p class="lead">
-                    {{ job.description|linebreaks }}
-                    <div class="col-md-12">
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- paginavagas -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-9339423272272547"
-     data-ad-slot="5887480671"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
+<section>
+    <div class="container">
+            {{ job.description|linebreaks }}
     </div>
-                </p>
-            </div>
-        </div>
-
-
-        <div class="panel-group" id="accordion">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false">
-                            <i class="fa fa-laptop"></i>
-                            Inscrição
-                        </a>
-                    </h4>
-                </div>
-                <div id="collapseThree" class="accordion-body collapse" aria-expanded="false">
-                    <div class="panel-body">
-                        {{ job.submitInfo|urlize|targetblank|safe|linebreaks }}
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-
-</div>
-
+</section>
 {% endblock %}
+
+
+
+
+
+{% block outside_main %}
+ <!-- Modal -->
+<div class="modal fade" id="InfoCandidato" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Informações</h4>
+        </div>
+        <div class="modal-body">
+            {{ job.submitInfo|urlize|targetblank|safe|linebreaks }}
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+{% endblock outside_main %}

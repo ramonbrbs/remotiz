@@ -1,269 +1,216 @@
 {% load staticfiles %}
+
 <!DOCTYPE html>
-<html>
-<head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PTGG4LL');</script>
-<!-- End Google Tag Manager -->
-    <!-- Basic -->
+<html lang="en">
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Post a job position or create your online resume by TheJobs!">
+    <meta name="keywords" content="">
 
-    <title>Remotiz - {% block title %}{% endblock %} </title>
+    <title>TheJobs - Job list</title>
 
-{% block keywords %}
+    <!-- Styles -->
+    <link href="{% static 'css/app.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/custom.css' %}" rel="stylesheet">
 
-{% endblock %}
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100,300,400,500,600,800%7COpen+Sans:300,400,500,600,700,800%7CMontserrat:400,700' rel='stylesheet' type='text/css'>
 
-    <meta name="description" content="Remotiz é um site para anúncios de vagas remotas e home office. Trabalhe de casa.">
-    <meta name="author" content="Ramon Barbosa">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" href="assets/img/favicon.ico">
+  </head>
 
-    <!-- Favicon -->
-    <meta name="msvalidate.01" content="EEF835638E77637DB667137D4EA4BA7F" />
-    <link rel="apple-touch-icon"{% static "img/apple-touch-icon.png" %}>
+  <body class="nav-on-header smart-nav bg-alt">
 
-    <!-- Mobile Metas -->
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Navigation bar -->
+    <nav class="navbar">
+      <div class="container">
 
-    <!-- Web Fonts  -->
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
+        <!-- Logo -->
+        <div class="pull-left">
+          <a class="navbar-toggle" href="#" data-toggle="offcanvas"><i class="ti-menu"></i></a>
 
-    <!-- Vendor CSS -->
-    <link rel="stylesheet" href="{% static "vendor/bootstrap/css/bootstrap.css" %}">
-    <link rel="stylesheet" href="{% static "Content/font-awesome.min.css" %}">
+          <div class="logo-wrapper">
+            <a class="logo" href="index.html"><img src="{% static 'img/logo.png' %}" alt="logo"></a>
+            <a class="logo-alt" href="index.html"><img src="{% static 'img/logo-alt.png' %}" alt="logo-alt"></a>
+          </div>
 
-    <link rel="stylesheet" href="{% static "vendor/simple-line-icons/css/simple-line-icons.css" %}">
-    <link rel="stylesheet" href="{% static "vendor/owl.carousel/assets/owl.theme.default.min.css" %}">
+        </div>
+        <!-- END Logo -->
 
-    <!-- Theme CSS -->
-    <link rel="stylesheet" href="{% static "css/theme.css" %}">
-    <link rel="stylesheet" href="{% static "css/theme-elements.css" %}">
+        <!-- User account -->
+        <div class="pull-right user-login">
+          <a class="btn btn-sm btn-primary" href="user-login.html">Login</a> or <a href="user-register.html">register</a>
+        </div>
+        <!-- END User account -->
 
-    <!-- Current Page CSS -->
-    <link rel="stylesheet" href="{% static "vendor/rs-plugin/css/settings.css" %}" media="screen">
-    <link rel="stylesheet" href="{% static "vendor/rs-plugin/css/layers.css" %}" media="screen">
-    <link rel="stylesheet" href="{% static "vendor/rs-plugin/css/navigation.css" %}" media="screen">
+        <!-- Navigation menu -->
+        <ul class="nav-menu">
+          <li>
+            <a href="index.html">Home</a>
+            <ul>
+              <li><a href="index.html">Version 1</a></li>
+              <li><a href="index-2.html">Version 2</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="active" href="#">Position</a>
+            <ul>
+              <li><a class="active" href="job-list-1.html">Browse jobs - 1</a></li>
+              <li><a href="job-list-2.html">Browse jobs - 2</a></li>
+              <li><a href="job-list-3.html">Browse jobs - 3</a></li>
+              <li><a href="job-detail.html">Job detail</a></li>
+              <li><a href="job-apply.html">Apply for job</a></li>
+              <li><a href="job-add.html">Post a job</a></li>
+              <li><a href="job-manage.html">Manage jobs</a></li>
+              <li><a href="job-candidates.html">Candidates</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Resume</a>
+            <ul>
+              <li><a href="resume-list.html">Browse resumes</a></li>
+              <li><a href="resume-detail.html">Resume detail</a></li>
+              <li><a href="resume-add.html">Create a resume</a></li>
+              <li><a href="resume-manage.html">Manage resumes</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Company</a>
+            <ul>
+              <li><a href="company-list.html">Browse companies</a></li>
+              <li><a href="company-detail.html">Company detail</a></li>
+              <li><a href="company-add.html">Create a company</a></li>
+              <li><a href="company-manage.html">Manage companies</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Pages</a>
+            <ul>
+              <li><a href="page-blog.html">Blog</a></li>
+              <li><a href="page-post.html">Blog-post</a></li>
+              <li><a href="page-about.html">About</a></li>
+              <li><a href="page-contact.html">Contact</a></li>
+              <li><a href="page-faq.html">FAQ</a></li>
+              <li><a href="page-pricing.html">Pricing</a></li>
+              <li><a href="page-typography.html">Typography</a></li>
+              <li><a href="page-ui-elements.html">UI elements</a></li>
+            </ul>
+          </li>
+        </ul>
+        <!-- END Navigation menu -->
 
-    <!-- Skin CSS -->
-    <link rel="stylesheet" href="{% static "css/skins/default.css" %}">
-
-    <!-- Theme Custom CSS -->
-    <link rel="stylesheet" href="{% static "css/custom.css" %}">
-
-    <!-- Head Libs -->
-    <script src="{% static "vendor/modernizr/modernizr.js" %}"></script>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-9339423272272547",
-    enable_page_level_ads: true
-  });
-</script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108396011-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-108396011-1');
-</script>
-</head>
-<body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PTGG4LL"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-    <div class="body">
-        <header id="header" data-plugin-options='{"stickyEnabled": true, "stickyEnableOnBoxed": true, "stickyEnableOnMobile": true, "stickyStartAt": 57, "stickySetTop": "-57px", "stickyChangeLogo": true}'>
-            <div class="header-body">
-                <div class="header-container container">
-                    <div class="header-row">
-                        <div class="header-column">
-                            <div class="header-logo">
-                                <a href="{% url "job:jobs_list" %}">
-                                    <img alt="Remotiz - Vagas Remotas"  data-sticky-width="220" data-sticky-height="65" data-sticky-top="20" src="{% static "images/logo.png" %}">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="header-column">
-                            <div class="header-row">
-                                <div class="header-search hidden-xs">
-                                    <form id="searchForm" action="" method="get">
-                                        <div class="input-group">
-
-                                            <input type="text" class="form-control" name="s" id="q" placeholder="Buscar..." required>
-                                            <span class="input-group-btn">
-                                                <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
-                                            </span>
-                                        </div>
-                                    </form>
-                                </div>
-                                <nav class="header-nav-top">
-                                    <ul class="nav nav-pills">
-
-                                        <li class="hidden-xs">
-                                            <a href="{% url "job:job_add" %}"><i class="fa fa-angle-right"></i> Anuncie sua Vaga</a>
-                                        </li>
-
-                                    </ul>
-                                </nav>
-                            </div>
-                            <div class="header-row">
-                                <div class="header-nav">
-                                    <button class="btn header-btn-collapse-nav" data-toggle="collapse" data-target=".header-nav-main">
-                                        <i class="fa fa-bars"></i>
-                                    </button>
-                                    <ul class="header-social-icons social-icons hidden-xs">
-                                        <li class="social-icons-facebook"><a href="http://www.facebook.com/remotiz" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-
-                                        <li class="social-icons-twitter"><a href="http://www.twitter.com/remotizvagas" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                                        {% comment %}
-                                        <li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-                                        {% endcomment %}
-                                    </ul>
-                                    {% comment %}
-                                    <div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
-                                        <nav>
-                                            <ul class="nav nav-pills" id="mainNav">
-                                                <li class="dropdown active">
-                                                    <a class="" href="{% url "job:jobs_list" %}">
-                                                        Home
-                                                    </a>
-
-                                                </li>
+      </div>
+    </nav>
+    <!-- END Navigation bar -->
 
 
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                    {% endcomment %}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
+    <!-- Page header -->
+    
+    
+    <!-- Page header -->
+    
+    {% block header %}
+      
+    {% endblock header %}
+      
+    <!-- END Page header -->
 
-        <div role="main" class="main">
-            {% block content %}
-            {% endblock %}
+      
+    <!-- END Page header -->
+
+
+    
+    {% block content %}
+      
+    {% endblock content %}
+      
+    <!-- END Main container -->
+
+
+    
+    {% block outside_main %}
+      
+    {% endblock outside_main %}
+      
+
+    <!-- Site footer -->
+    <footer class="site-footer">
+
+      <!-- Top section -->
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify">An employment website is a web site that deals specifically with employment or careers. Many employment websites are designed to allow employers to post job requirements for a position to be filled and are commonly known as job boards. Other employment sites offer employer reviews, career and job-search advice, and describe different job descriptions or employers. Through a job website a prospective employee can locate and fill out a job application.</p>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Company</h6>
+            <ul class="footer-links">
+              <li><a href="page-about.html">About us</a></li>
+              <li><a href="page-typography.html">How it works</a></li>
+              <li><a href="page-faq.html">Help center</a></li>
+              <li><a href="page-typography.html">Privacy policy</a></li>
+              <li><a href="page-contact.html">Contact us</a></li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Trendeing jobs</h6>
+            <ul class="footer-links">
+              <li><a href="job-list.html">Front-end developer</a></li>
+              <li><a href="job-list.html">Android developer</a></li>
+              <li><a href="job-list.html">iOS developer</a></li>
+              <li><a href="job-list.html">Full stack developer</a></li>
+              <li><a href="job-list.html">Project administrator</a></li>
+            </ul>
+          </div>
         </div>
 
-        <footer id="footer">
-            <div class="container">
-                <div class="row">
-{% comment %}
-                    <div class="col-md-1">
+        <hr>
+      </div>
+      <!-- END Top section -->
 
-                            <a href="index.html" class="logo">
-                                <img alt="R" class="img-responsive" src="img/logo-footer.png">
-                            </a>
-                        </div>{% endcomment %}
+      <!-- Bottom section -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyrights &copy; 2016 All Rights Reserved by <a href="http://themeforest.net/user/shamsoft">ShaMSofT</a>.</p>
+          </div>
 
-                        <div class="col-md-4">
-                            <p>Remotiz.com - Todos os direitos reservados.</p>
-                        </div>
-                    {% comment %}
-                        <div class="col-md-2">
-                            <nav id="sub-menu">
-                                <ul>
-                                    <li><a href="page-faq.html">FAQ's</a></li>
-                                    <li><a href="sitemap.html">Sitemap</a></li>
-                                    <li><a href="contact-us.html">Contact</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                        {% endcomment %}
-                    <div class="col-md-3 col-md-offset-2">
-                        <div class="newsletter">
-                            <h4>Newsletter</h4>
-                            <p>Receba as últimas vagas em seu e-mail.</p>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li><a class="instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- END Bottom section -->
+
+    </footer>
+    <!-- END Site footer -->
 
 
+    <!-- Back to top button -->
+    <a id="scroll-up" href="#"><i class="ti-angle-up"></i></a>
+    <!-- END Back to top button -->
 
-                            <div class="alert alert-danger hidden" id="newsletterError"></div>
+    <!-- Scripts -->
+    <script src="{%static 'js/app.min.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
 
-                            <form id="newsletterForm" action="php/newsletter-subscribe.php" method="POST">
-                                <div class="input-group">
-                                    {% csrf_token %}
-                                    <input type="hidden" name="returnback" value="{{ request.path|urlencode }}" />
-                                    <input class="form-control" placeholder="E-mail" name="newsletterEmail" id="newsletterEmail" type="text">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-default" type="submit">Cadastrar!</button>
-                                    </span>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
-
-                    <div class="col-md-2">
-                        <h4>Redes Sociais</h4>
-                        <ul class="social-icons">
-                            <li class="social-icons-facebook"><a href="http://www.facebook.com/remotiz" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                            <li class="social-icons-twitter"><a href="http://www.twitter.com/remotizvagas" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                            {% comment %}<li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>{% endcomment %}
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-        </footer>
-    </div>
-
-    <!-- Vendor -->
-    <script src="{% static "vendor/jquery/jquery.js" %}"></script>
-    <script src="{% static "vendor/jquery.appear/jquery.appear.js" %}"></script>
-    <script src="{% static "vendor/jquery.easing/jquery.easing.js" %}"></script>
-
-    <script src="{% static "vendor/bootstrap/js/bootstrap.js" %}"></script>
-    <script src="{% static "vendor/common/common.js" %}"></script>
-    <script src="{% static "vendor/jquery.validation/jquery.validation.js" %}"></script>
-    <script src="{% static "vendor/jquery.stellar/jquery.stellar.js" %}"></script>
-    <script src="{% static "vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.js" %}"></script>
-    <script src="{% static "vendor/jquery.gmap/jquery.gmap.js" %}"></script>
-    <script src="{% static "vendor/jquery.lazyload/jquery.lazyload.js" %}"></script>
-    <script src="{% static "vendor/isotope/jquery.isotope.js" %}"></script>
-
-
-
-
-    <!-- Theme Base, Components and Settings -->
-    <script src="{% static "js/theme.js" %}"></script>
-
-    <!-- Current Page Vendor and Views -->
-    <script src="{% static "vendor/rs-plugin/js/jquery.themepunch.tools.min.js" %}"></script>
-    <script src="{% static "vendor/rs-plugin/js/jquery.themepunch.revolution.min.js" %}"></script>
-
-    <script src="{% static "js/views/view.home.js" %}"></script>
-
-    <!-- Theme Custom -->
-    <script src="{% static "js/custom.js" %}"></script>
-
-    <!-- Theme Initialization Files -->
-    <script src="{% static "js/theme.init.js" %}"></script>
-
-    <!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-12345678-1', 'auto');
-        ga('send', 'pageview');
-    </script>
-     -->
-
-</body>
-
-{% block scripts %}
-
-{% endblock %}
-</html>
+    
+    {% block scripts %}
+      
+    {% endblock scripts %}
+      
+  </body>
+</html>;

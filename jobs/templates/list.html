@@ -1,69 +1,87 @@
 {% extends "base.html" %}
+{% load staticfiles %}
+
 
 {% block title %}Vagas para Trabalho Remoto Freelancer e Empregos{% endblock %}
 {% block keywords %}
     <meta name="keywords" content="remoto, clt,freelancer, trabalho remoto, remoto,home office, vagas " />
 {% endblock %}
-{% block content %}
-<div class='container'>
-    <div class="bordertopbottom relative z20">
-        <div class="container ptb40 cdark">
-            <h1 class="text-center titlefont size30 c999">Últimas Vagas</h1>
 
-            <!-- <div class="toparrow"></div> -->
-        </div>
+
+{% block header %}
+<header class="page-header bg-img" style="background-image: url({% static 'img/bg-banner1.jpg' %});">
+    <div class="container page-name">
+      <h1 class="text-center">Browse jobs</h1>
+      <p class="lead text-center">Use following search box to find jobs that fits you better</p>
     </div>
-</div>
-        <div class="section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <table class="table table-hover table-striped">
-                            <tbody>
 
-{% for job in jobs %}
-
-                                <tr>
-                                    <td>
-                                        <i class="-alt fa fa-2x fa-user fa-fw"></i>
-                                    </td>
-                                    <td>
-                                        <h4>
-                                            <a href='{{ job.get_absolute_url }}'><b>{{ job.title }}</b></a>
-                                        </h4>
-                                        <p>{{ job.publish |date:"d/m/Y"  }}</p>
-                                    </td>
-                                    <td>
-                                        <p>{{ job.description|truncatewords_html:18 }}</p>
-                                    </td>
-                                    
-                                    <td><div class="btn-group">
-                                        {% for tag in job.tags.all %}
-                                        
-                                            <button class="btn btn-default" value="left" type="button">
-                                                {{tag}}</button>
-                                        
-                                        
-                                        {% endfor %}
-                                        </div>
-                                        
-                                    </td>
-                                </tr>
-{% endfor %}                                
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
     <div class="container">
-    
+      <form id="searchForm" action="" method="get">
+
+        <div class="row">
+          <div class="form-group col-xs-12 col-sm-12">
+            <input type="text" name="s" class="form-control" placeholder="Buscar por tecnologia ou atividade">
+          </div>
+
+        </div>
+        
+        <div class="button-group">
+          <div class="action-buttons">
+            <button class="btn btn-primary">Buscar</button>
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+
+  </header>
+
+{% endblock %}
+
+{% block content %}
 
 
 
 
-</div>
+  
+<main>
+        <section class="no-padding-top bg-alt">
+	<div class="container">
+	<div class="row">
 
+            {% for job in jobs %}
+			<div class="col-xs-12">
+              <a class="item-block" href="{{ job.get_absolute_url }}">
+                <header>
+                  <img src="{{ job.image }}" alt="">
+                  <div class="hgroup">
+                    <h4>{{ job.title }}</h4>
+                    <h5>{{ job.description|truncatewords_html:18 }}</h5>
+                  </div>
+                  <div class="header-meta">
+				  {% for tag in job.tags.all %}
+				  <span class="label label-primary">{{tag}}</span>
+				  {% endfor %}
+                    
+                    
+					
+                  </div>
+                </header>
+              </a>
+            </div>
+			{% endfor %}
+            
+
+          </div></div>
+
+</section>
+</main>
+
+
+
+
+        
 {% include "pagination.html" with page=jobs %}
 
 {% endblock %}

@@ -15,6 +15,10 @@ class Job(models.Model):
     slug = AutoSlugField(populate_from='title', unique=True)
     publish = models.DateTimeField(default=timezone.now)
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default=0)
+    image = models.CharField(null=True,blank=True, max_length=512)
+    tipo = models.CharField(null=True, blank=True, max_length=50)
+    company = models.CharField(null=True, blank=True, max_length=256)
+    salary = models.DecimalField(null=True, blank=True,max_digits=8, decimal_places=2)
 
     def get_absolute_url(self):
         return reverse('job:job_detail', args=[self.slug])

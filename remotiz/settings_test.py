@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'taggit',
     'captcha',
     'widget_tweaks',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
