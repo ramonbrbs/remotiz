@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% load targetblank %}
-{% block keywords %}
-    <meta name="keywords" content="{{ job.tags.all|join:"," }}" />
-{% endblock %}
+{% block keywords %}{{ job.tags.all|join:"," }}{% endblock %}
+
+{% block description %}{{jobs.title}} {{job.description|truncatewords:10}} {% endblock description %}
+  
 {% block scripts%}
 <script type="application/ld+json">
     {
@@ -47,7 +48,7 @@
 
         <hr>
 
-        {{job.description}}
+        
 
         <div class="button-group">
           <ul class="social-icons">
@@ -79,6 +80,7 @@
 
 <section>
     <div class="container">
+      <h3>Detalhes:</h2>
             {{ job.description|linebreaks }}
     </div>
 </section>
