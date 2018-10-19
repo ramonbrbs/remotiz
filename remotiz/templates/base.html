@@ -6,10 +6,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Post a job position or create your online resume by TheJobs!">
-    <meta name="keywords" content="">
+    <meta name="description" content="{% block description %}{% endblock description %}">
+    <meta name="keywords" content="{% block keywords %}{%endblock%}">
 
-    <title>TheJobs - Job list</title>
+    <title>{% block title %}{% endblock title %} Remotiz, Vagas Remotas para Desenvolvedores</title>
 
     <!-- Styles -->
     <link href="{% static 'css/app.min.css' %}" rel="stylesheet">
@@ -144,8 +144,8 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-12 col-md-6">
-            <h6>About</h6>
-            <p class="text-justify">Ofereceços vagas de trabalho remoto para desenvolvedores e programadores desde 2017. Todas as vagas publicadas no site são encontradas através de nossos buscadores ou enviadas diretamente para nós.</p>
+            <h6>Sobre</h6>
+            <p class="text-justify">Oferecemos vagas de trabalho remoto para desenvolvedores e programadores desde 2017. Todas as vagas publicadas no site são encontradas através de nossos buscadores ou enviadas diretamente para nós.</p>
           </div>
 
           
