@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'captcha',
     'widget_tweaks',
     'rest_framework',
+    'taggit_serializer',
 ]
 
 MIDDLEWARE = [
@@ -134,3 +135,22 @@ RECAPTCHA_PRIVATE_KEY = '6LddLhMUAAAAAKHpEAa2gBSQeL42n7K_EGmJAJ13'
 
 NOCAPTCHA = True
 STATIC_ROOT = os.path.join(BASE_DIR, "static/")
+
+REST_FRAMEWORK = {
+    
+}
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10,
+    'DEFAULT_PERMISSION_CLASSES': [
+        #'rest_framework.permissions.AllowAny',
+        'rest_framework.authentication.BasicAuthentication'
+        
+    ],
+    'DEFAULT_PERMISSION_CLASSES': (
+   'rest_framework.permissions.IsAuthenticated',
+)
+}
