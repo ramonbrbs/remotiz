@@ -15,9 +15,17 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from rest_framework import routers
+from jobs import views
+
+router = routers.DefaultRouter()
+#router.register(r'jobs', views.JobListsAPI.as_view())
+
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('jobs.urls', namespace='job', app_name='job')),
-    #url(r'^api/', include('rest_framework.urls'))
+    url(r'^api/', include('rest_framework.urls', namespace='rest_framework')),
+     url(r'^api1/jobs/', views.JobListsAPI.as_view())
 ]

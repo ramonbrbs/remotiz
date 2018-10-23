@@ -8,6 +8,13 @@ from .forms import AddJobForm
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib.postgres.search import SearchVector
 
+from rest_framework import generics
+from jobs.serializers import JobSerializer
+
+class JobListsAPI(generics.ListCreateAPIView):
+    queryset = Job.objects.all()
+    serializer_class = JobSerializer
+
 
 class JobListView(ListView):
 

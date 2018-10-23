@@ -19,6 +19,8 @@ class Job(models.Model):
     tipo = models.CharField(null=True, blank=True, max_length=50)
     company = models.CharField(null=True, blank=True, max_length=256)
     salary = models.DecimalField(null=True, blank=True,max_digits=8, decimal_places=2)
+    
+    
 
     def get_absolute_url(self):
         return reverse('job:job_detail', args=[self.slug])
