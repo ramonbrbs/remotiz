@@ -4,6 +4,8 @@ remotiz/settings_prod.py
 #remotiz/static/*
 .idea/workspace.xml
 
+remotiz/__pycache__/
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
