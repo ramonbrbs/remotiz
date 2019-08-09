@@ -2,7 +2,7 @@ from django.db import models
 from taggit.managers import TaggableManager
 from django.utils import timezone
 from autoslug import AutoSlugField
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 
 
 class Job(models.Model):
@@ -19,6 +19,7 @@ class Job(models.Model):
     tipo = models.CharField(null=True, blank=True, max_length=50)
     company = models.CharField(null=True, blank=True, max_length=256)
     salary = models.DecimalField(null=True, blank=True,max_digits=8, decimal_places=2)
+    currency = models.CharField(max_length=5,default='R$')
     
     
 

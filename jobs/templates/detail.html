@@ -32,15 +32,16 @@
         
         <ul class="details cols-3">
           
-
+{% if job.tipo %}
           <li>
             <i class="fa fa-briefcase"></i>
-            <span>{% if job.tipo %}{{job.tipo}}{%else%}Não informado{%endif%}</span>
+            <span>{{job.tipo}}</span>
           </li>
+{%endif%}
 
           <li>
             <i class="fa fa-money"></i>
-            <span>{% if job.salary %}{{ job.salary }} {% else %} Não Informado {%endif%}</span>
+            <span>{% if job.salary %}{{ job.currency }}  {{ job.salary }} {% else %} Não Informado {%endif%}</span>
           </li>
 
           

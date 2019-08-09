@@ -25,7 +25,7 @@ router = routers.DefaultRouter()
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^', include('jobs.urls', namespace='job', app_name='job')),
+    url(r'^', include('jobs.urls', namespace='job')),
     url(r'^api/', include('rest_framework.urls', namespace='rest_framework')),
      url(r'^api1/jobs/', views.JobListsAPI.as_view())
 ]
