@@ -29,3 +29,9 @@ remotiz/__pycache__/settings.cpython-36.pyc
 remotiz/__pycache__/settings_test.cpython-36.pyc
 remotiz/__pycache__/urls.cpython-36.pyc
 remotiz/__pycache__/wsgi.cpython-36.pyc
+
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
